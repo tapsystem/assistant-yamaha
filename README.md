@@ -1,6 +1,7 @@
 # assistant-yamaha
-Extension for assistant-plugins ( by aymeric) to pilot yamaha AV receiver with voice control
-based on PSeitz yamaha node module https://github.com/PSeitz/yamaha-nodejs/
+
+Extension for assistant-plugins by aymeric ( https://github.com/Aymkdn/assistant-plugins) to pilot yamaha AV receiver with voice control
+Based on PSeitz yamaha node module ( https://github.com/PSeitz/yamaha-nodejs/ )
 
 Appel via ifTTT
  		utiliser le pushbullet, push note en out avec :
