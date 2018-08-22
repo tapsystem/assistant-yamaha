@@ -1,0 +1,14 @@
+{
+  "name": "assistant-yamaha",
+  "version": "1.0.0",
+  "description": "Control d'un ampli / receiver yamaha",
+  "author": "TapSystem",
+  "main": "yamaha.js",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "xml2js": "^0.4.16",
+    "peer-ssdp": "0.0.5"
+  },
+  "repository": "https://github.com/tapsystem/assistant-yamaha/",
+  "license": "MIT"
+}
