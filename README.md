@@ -97,7 +97,9 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
 
 ### Commandes disponibles
 ##### Les variables :
-le paramétre `int zone` est optionnel et le plugin selectionne automatiquement la zone 1 `MainZone` si aucune variables ne lui est transmise. 
+  - le paramétre `int zone` est optionnel et le plugin selectionne automatiquement la zone 1 `MainZone` si aucune variables ne lui est transmise. Les valeur possibles sont 1,2,3 ou 4 selon les versions d'ampli AV.
+  - les paramétres de volumes `int db` et `int by`permette de donner une indication de volume. Cette donnée doit être passée avec une sa valeur decimale et multipliée par 10. Ainsi pour réglé un volume à -45.0 dB, `int db` devra être égale à -450.
+ 
 
 **powerOn** `int zone` : Allume  
 **powerOff** `int zone` : Eteint 
@@ -112,19 +114,19 @@ le paramétre `int zone` est optionnel et le plugin selectionne automatiquement 
 **muteOff** `int zone` : active le mode sourdine
 **muteToggle** `int zone` : switch le mode sourdine en fonction de l'état actuel
 
-**setVolumeTo** = function(db, zone)	=> defini le volume
-**setVolume** = function(db, zone)		=> defini le volume (idem)
-**volumeUp** = function(by, zone)		=> augmente le volume par tranche de XdB (5=0.5dB)
-**volumeDown** = function(by, zone)		=> baisse le volume par tranche de XdB (5=0.5dB)
-**adjustVolumeBy** = function(by, zone)	=> ajuste le volume de +/- XdB (-15 = -1.5dB)
+**setVolumeTo** `int db, int zone` : defini le volume à une valeur spécifique
+**setVolume** `int db, int zone` : (idem)
+**volumeUp** `int by, int zone` : augmente le volume par tranche du nombre de décibel indiqué (5 => +0.5dB)
+**volumeDown** `int by, int zone` : baisse le volume par tranche du nombre de décibel indiqué (50 => -5dB)
+**adjustVolumeBy** `int by, int zone` : ajuste le volume du nombre de décibel indiqué en tenant compte du signe +/- (-15 => -1.5dB et 25 => 2.5dB)
 
-**setPureDirect** = function(on) 		=> switch du pure direct on = 1 pour activer ou 0 pour desactiver
+**setPureDirect** `int on` : switch du pure direct (on = 1 pour activer ou 0 pour desactiver)
 
-**stop = function(zone)			=> touche stop de la telecommande
-**pause = function(zone)			=> touche pause de la telecommande
-**play = function(zone)			=> touche play de la telecommande
-**skip = function(zone)			=> touche forward de la telecommande
-**rewind = function(zone)			=> touche rewind de la telecommande
+**stop** `int zone` : equivalence de la touche stop de la telecommande
+**pause** `int zone` : equivalence de la touche pause de la telecommande
+**play** `int zone` : equivalence de la touche play de la telecommande
+**skip** `int zone` : equivalence de la touche forward de la telecommande
+**rewind** `int zone` : equivalence de la touche rewind de la telecommande
 
 **partyModeOn = function()		=> active le mode party ( duplication de l'input actuel sur toutes les zones dispo )
 **partyModeOff = function()		=> desactivation du mode party
@@ -163,10 +165,7 @@ le paramétre `int zone` est optionnel et le plugin selectionne automatiquement 
 	==========================
 	Variables pour commandes :
 	==========================
- 
- pour toute les variables ZONE:
-	la variable doit être un integer 1,2,3 ou 4
-	elles ne sont pas obligatoire, si elle ne sont pas passée, la main_zone est selectionnée
+
 
  pour toute les variables volumes ( TO et BY ):
 	la variable doit être un integer compris entre les valeur min / max du fichier de conf
