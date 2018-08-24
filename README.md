@@ -1,7 +1,9 @@
 # assistant-yamaha
 
-Extension for assistant-plugins by aymeric ( https://github.com/Aymkdn/assistant-plugins) to pilot yamaha AV receiver with voice control
-Based on PSeitz yamaha node module ( https://github.com/PSeitz/yamaha-nodejs/ )
+Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de piloter un ampli AV Yamaha ( Testé sur Rx-V675). [stations Netatmo](https://weathermap.netatmo.com/).
+
+
+Controle Yamaha basé sur [PSeitz yamaha node module](https://github.com/PSeitz/yamaha-nodejs/).
 
 Appel via ifTTT
  		utiliser le pushbullet, push note en out avec :
