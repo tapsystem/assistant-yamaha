@@ -67,20 +67,13 @@ Le déclenchement des commandes se fait via IFTTT pour relier une commande vocal
   7. Choisir la carte **Push a Note**  
   8. Dans le champs *« Title »*, mettre `Assistant`  
   9. Dans le champs *« Message »*, mettre `yamaha_` suivi par la commande souhaitée
-    - Voir [Combinaions](#combinaisons) pour les actions disponibles
-    - Il est possible d'enchainer plusieurs actions, voir [Combinaions](#combinaisons)
+    - Voir [Commandes](#commandes) pour les actions disponibles
+    - Il est possible d'enchainer plusieurs actions, voir [Combinaisons](#combinaisons)
     - les commandes peuvent nécessiter des variables, voir [Variables](#variables)
   12. Enregistrer puis cliquer sur **Finish**  
   13. Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
   14. Votre assistant devrait s'exécuter
 
-
-
-
-COMMANDE(S) peut soit être une commande simple, soit une temporisation (temps en seconde précédé par une *),soit contenir plusieurs commandes séparées par des virgules ( sans espace )
- 	exemples:
- 		yamaha_action1				: cela lance la fonction 1
- 		yamaha_action1,*2,action2   : cela lance la fonction 1, fait une pause de 2 sec, lance l'action 2
 
  de plus, les commandes peuvent contenir des variables (en les séparant par des hash)
  	exemples :
@@ -89,9 +82,11 @@ COMMANDE(S) peut soit être une commande simple, soit une temporisation (temps e
 		
 ### Combinaisons
 il est possible d'enchainer plusieurs actions avec une seul commande vocal. Pour cela, séparez les commande dans le champ *« Message »* par des virgules. Le paramétre `default_cmd_interval` est une pause s'intercalant entre chaque commandes.
+
   exemple : `yamaha_commande1,commande2,commande3` et ainsi de suite ...
   
 Vous pouvez également inclure une pause suplémentaire en cas de besoin particulier en ajoutant `*x`, x etant le nombre de seconde d'attente avant la commande suivante.
+
   exemple : `yamaha_commande1,*2,commande2,*4,commande3` dans ce cas des pauses de 2 et 4 secondes seront respictivement appliquées entre les commandes 1 et 2 puis 2 et 3. 
 
 ### Variables
