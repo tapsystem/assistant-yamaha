@@ -96,9 +96,12 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
 
 
 ### Commandes disponibles
-```javascript
-powerOn#zone
-```
+le paramétre `zone` est optionnel et le plugin selectionne automatiquement la `MainZone` si aucune variables ne lui est transmise
+
+powerOn`int zone`			=> Allume  
+powerOff`int zone`			=> Eteint  
+
+
 
 
 	=======================
