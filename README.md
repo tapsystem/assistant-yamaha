@@ -81,7 +81,7 @@ Le déclenchement des commandes se fait via IFTTT pour relier une commande vocal
  		yamaha_actionA#33,*2,actionB#1#59   : cela lance la fonction A avec 33 en variable, pause de 2 sec, lance l'action B avec 1 et 59 en variables
 		
 ### Combinaisons
-il est possible d'enchainer plusieurs actions avec une seul commande vocal. Pour cela, séparez les commande dans le champ *« Message »* par des virgules. Le paramétre `default_cmd_interval` est une pause s'intercalant entre chaque commandes.
+il est possible d'enchainer plusieurs actions avec une seul commande vocal. Pour cela, séparez les commandes dans le champ *« Message »* par des virgules. Le paramétre `default_cmd_interval` est une pause s'intercalant entre chaque commandes.
 
   exemple : `yamaha_commande1,commande2,commande3` et ainsi de suite ...
   
@@ -90,11 +90,16 @@ Vous pouvez également inclure une pause suplémentaire en cas de besoin particu
   exemple : `yamaha_commande1,*2,commande2,*4,commande3` dans ce cas des pauses de 2 et 4 secondes seront respictivement appliquées entre les commandes 1 et 2 puis 2 et 3. 
 
 ### Variables
+Il est possible de passer des valeurs au commande. Pour cela, séparez la commande et les variables par des # dans le champ *« Message »*.Cela reste compatible avec les commandes multiples et les pauses.
 
-### Commandes
+  exemple : `yamaha_commande1#var1#var2,commande2,*2,commande3#var3` et ainsi de suite ...
 
 
-### Exemples
+### Commandes disponibles
+```javascript
+powerOn#zone
+```
+
 
 	=======================
 	COMMANDES disponibles :
@@ -159,6 +164,7 @@ Vous pouvez également inclure une pause suplémentaire en cas de besoin particu
 		- commentez le code entre "function Yamaha(){}" et  "module.exports = Yamaha;"
 		- créez vos propres functions en prenant Yamaha.prototype.switchToFavoriteNumber en exemple
  
+ ### Exemples
 
 	==========================
 	Variables pour commandes :
