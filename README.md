@@ -44,17 +44,32 @@ Optionnel, si `auto_discover = true` : l'ip ( ipv4 de type xxx.xxx.xxx.xxx) de v
   - valeur par défaut : **false**
 
 #### Paramètre `default_cmd_interval`
-  - Il 'sagit du nombre de miliseconde entre 2 action pour laisser le temps à l'ampli d'appliquer les commandes
+  - Il 'sagit du nombre de miliseconde entre 2 actions pour laisser le temps à l'ampli d'appliquer les commandes, vous pouvez augmenter cette valeur si l'ampli à des difficultés à réagir ou si le reseau est peu réactif.
   - valeur par défaut : **1000**
-#### Paramètre `receiver_minVoldB`
-
-#### Paramètre `receiver_maxVoldB`
-
-
-
+  
+#### Paramètre `receiver_minVoldB` et `receiver_maxVoldB`
+  - Cela permet de limiter les valeur pouvant être transmise par les commandes vocales et d'éviter que l'ampli refuse en erreurs 
+  - valeur par défaut : **-80.5** et **16.5**
 
 
 ## Utilisation
+
+Le déclenchement des commandes se fait via IFTTT pour relier une commande vocal à une action
+
+  1. Créer une nouvelle *applet* dans IFTTT : [https://ifttt.com/create](https://ifttt.com/create)  
+  2. Cliquer sur **this** puis choisir **Google Assistant** (ou **Amazon Alexa** ou **Cortana**)  
+  3. Choisir la carte **Say a simple phrase** (ou autre, selon votre cas)  
+  4. Dans *« What do you want to say? »* mettre la phrase qui va déclencher l'action  
+  5. Remplir les autres champs de la carte  
+  6. Maintenant, cliquer sur **that** puis choisir **Pushbullet**  
+  7. Choisir la carte **Push a Note**  
+  8. Dans le champs *« Title »*, mettre `Assistant`  
+  9. Dans le champs *« Message »*, mettre `yamaha_` suivi par la commande souhaitée (si plusieurs commandes, les séparer par une virgule) (voir [commandes multiples](#Commandes multiples))
+  10.
+  11. Enregistrer puis cliquer sur **Finish**  
+  12. Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
+  13. Votre assistant devrait s'exécuter
+
 Appel via ifTTT
  		utiliser le pushbullet, push note en out avec :
  		- Title : Assistant
@@ -69,6 +84,8 @@ COMMANDE(S) peut soit être une commande simple, soit une temporisation (temps e
  	exemples :
  		yamaha_actionA#1#88					: cela lance la fonction A avec les variables 1 et 88
  		yamaha_actionA#33,*2,actionB#1#59   : cela lance la fonction A avec 33 en variable, pause de 2 sec, lance l'action B avec 1 et 59 en variables
+#Commandes multiples
+
 
 	=======================
 	COMMANDES disponibles :
