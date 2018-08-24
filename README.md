@@ -35,11 +35,17 @@ Dans la section concernant le plugin `yamaha`, on trouve plusieurs paramètres :
   - valeur par défaut : **true**
 
 #### Paramètre `receiver_ip`
+Optionnel, si `auto_discover = true` : l'ip ( ipv4 de type xxx.xxx.xxx.xxx) de votre ampli sur le réseaux local
 
 #### Paramètre `display_error`
+  - valeurs possibles : 
+    - **true** qui permet d'afficher dans la console les erreur retourner par les envois de commande à l'ampli
+    - **false** ... n'affiche rien
+  - valeur par défaut : **false**
 
 #### Paramètre `default_cmd_interval`
-
+  - Il 'sagit du nombre de miliseconde entre 2 action pour laisser le temps à l'ampli d'appliquer les commandes
+  - valeur par défaut : **1000**
 #### Paramètre `receiver_minVoldB`
 
 #### Paramètre `receiver_maxVoldB`
