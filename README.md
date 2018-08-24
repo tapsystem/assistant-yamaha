@@ -31,18 +31,18 @@ Dans la section concernant le plugin `yamaha`, on trouve plusieurs paramètres :
 #### Paramètre `auto_discover` :
   - valeurs possibles : 
     - **true** qui permet de rechercher automatiquement l'ip de l'ampli sur votre réseau
-    - **false** pour utiliser une ip de votre choix que vous pourrez renseigner dans le paramétre suivant.
+    - **false** qui permet d'utiliser l'ip de votre choix (à définir dans `receiver_ip`).
   - valeur par défaut : **true**
 
-### Paramètre `receiver_ip`
+#### Paramètre `receiver_ip`
 
-### Paramètre `display_error`
+#### Paramètre `display_error`
 
-### Paramètre `default_cmd_interval`
+#### Paramètre `default_cmd_interval`
 
-### Paramètre `receiver_minVoldB`
+#### Paramètre `receiver_minVoldB`
 
-### Paramètre `receiver_maxVoldB`
+#### Paramètre `receiver_maxVoldB`
 
 
 
