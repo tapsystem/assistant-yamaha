@@ -26,10 +26,10 @@ Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/ass
 
 Éditer le fichier `configuration.json` du répertoire `assistant-plugins`.
 
-Dans la section concernant le plugin `yamaha`, on trouve plusieurs paramètres.
+Dans la section concernant le plugin `yamaha`, on trouve plusieurs paramètres :
 
-### Paramètre `auto_discover`
-  - valeur possible : **true** qui permet de rechercher automatiquement l'ip de l'ampli sur votre réseau ou **false** pour utiliser une ip de votre choix que vous pourrez renseigner dans le paramétre suivant.
+### Paramètre `auto_discover` :
+  - valeurs possibles : **true** qui permet de rechercher automatiquement l'ip de l'ampli sur votre réseau ou **false** pour utiliser une ip de votre choix que vous pourrez renseigner dans le paramétre suivant.
   - valeur par défaut : **true**
 
 ### Paramètre `receiver_ip`
