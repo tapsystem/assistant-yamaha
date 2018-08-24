@@ -1,6 +1,6 @@
 # assistant-yamaha
 
-Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de piloter un ampli AV Yamaha ( Testé sur Rx-V675).
+Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de piloter un ampli AV Yamaha (Testé sur Rx-V675).
 
 Controle Yamaha basé sur [PSeitz yamaha node module](https://github.com/PSeitz/yamaha-nodejs/).
 
@@ -20,7 +20,7 @@ Si vous n'avez pas installé [`assistant-plugins`](https://aymkdn.github.io/assi
 Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), et que vous souhaitez ajouter ce plugin, alors :
   - Pour Windows, télécharger [`install_yamaha.bat`]() dans le répertoire `assistant-plugins`, puis l'exécuter en double-cliquant dessus.  
   - Pour Linux/MacOS, ouvrir une console dans le répertoire `assistant-plugins` et taper :  
-  `npm install assistant-temperature-local@latest --save --loglevel error && npm run-script postinstall`
+  `npm install assistant-yamaha-local@latest --save --loglevel error && npm run-script postinstall`
 
 ## Configuration
 
@@ -29,6 +29,8 @@ Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/ass
 Dans la section concernant le plugin `yamaha`, on trouve plusieurs paramètres.
 
 ### Paramètre `auto_discover`
+	- valeur possible : **true** qui permet de rechercher automatiquement l'ip de l'ampli sur votre réseau ou **false** pour utiliser une ip de votre choix que vous pourrez renseigner dans le paramétre suivant.
+	- valeur par défaut : **true**
 
 ### Paramètre `receiver_ip`
 
