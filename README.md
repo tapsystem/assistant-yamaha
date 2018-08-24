@@ -9,9 +9,11 @@ Controle Yamaha basé sur [PSeitz yamaha node module](https://github.com/PSeitz/
   - [Installation](#installation)
   - [Configuration](#configuration)
   - [Utilisation](#utilisation)
-  - [Personnalisation](#personnalisation)
+  - [Combinaisons](#combinaisons)
+  - [Variables](#variables)
   - [Commandes](#commandes)
-  - [Exemple](#exemple)
+  - [Exemples](#exemples)
+  - [Applet IFTTT](#applets)
 
 ## Installation
 
@@ -65,19 +67,16 @@ Le déclenchement des commandes se fait via IFTTT pour relier une commande vocal
   7. Choisir la carte **Push a Note**  
   8. Dans le champs *« Title »*, mettre `Assistant`  
   9. Dans le champs *« Message »*, mettre `yamaha_` suivi par la commande souhaitée
-    - si plusieurs commandes, les séparer par une virgule. Voir [Combinaions](#combinaisons)
-    - les commandes peuvent nécessiter des variables. Voir [Variables](#variables)
+    - Voir [Combinaions](#combinaisons) pour les actions disponibles
+    - Il est possible d'enchainer plusieurs actions, voir [Combinaions](#combinaisons)
+    - les commandes peuvent nécessiter des variables, voir [Variables](#variables)
   12. Enregistrer puis cliquer sur **Finish**  
   13. Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
   14. Votre assistant devrait s'exécuter
 
 
 
-Appel via ifTTT
- 		utiliser le pushbullet, push note en out avec :
- 		- Title : Assistant
-		- Message : yamaha_COMMANDE(S)
-		    
+
 COMMANDE(S) peut soit être une commande simple, soit une temporisation (temps en seconde précédé par une *),soit contenir plusieurs commandes séparées par des virgules ( sans espace )
  	exemples:
  		yamaha_action1				: cela lance la fonction 1
@@ -89,9 +88,18 @@ COMMANDE(S) peut soit être une commande simple, soit une temporisation (temps e
  		yamaha_actionA#33,*2,actionB#1#59   : cela lance la fonction A avec 33 en variable, pause de 2 sec, lance l'action B avec 1 et 59 en variables
 		
 ### Combinaisons
+il est possible d'enchainer plusieurs actions avec une seul commande vocal. Pour cela, séparez les commande dans le champ *« Message »* par des virgules. Le paramétre `default_cmd_interval` est une pause s'intercalant entre chaque commandes.
+  exemple : `yamaha_commande1,commande2,commande3` et ainsi de suite ...
+  
+Vous pouvez également inclure une pause suplémentaire en cas de besoin particulier en ajoutant `*x`, x etant le nombre de seconde d'attente avant la commande suivante.
+  exemple : `yamaha_commande1,*2,commande2,*4,commande3` dans ce cas des pauses de 2 et 4 secondes seront respictivement appliquées entre les commandes 1 et 2 puis 2 et 3. 
 
 ### Variables
 
+### Commandes
+
+
+### Exemples
 
 	=======================
 	COMMANDES disponibles :
