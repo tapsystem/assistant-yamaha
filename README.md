@@ -64,11 +64,14 @@ Le déclenchement des commandes se fait via IFTTT pour relier une commande vocal
   6. Maintenant, cliquer sur **that** puis choisir **Pushbullet**  
   7. Choisir la carte **Push a Note**  
   8. Dans le champs *« Title »*, mettre `Assistant`  
-  9. Dans le champs *« Message »*, mettre `yamaha_` suivi par la commande souhaitée (si plusieurs commandes, les séparer par une virgule. Voir [commandes multiples](#Commandes))
-  10. Ahhh
-  11. Enregistrer puis cliquer sur **Finish**  
-  12. Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
-  13. Votre assistant devrait s'exécuter
+  9. Dans le champs *« Message »*, mettre `yamaha_` suivi par la commande souhaitée
+    - si plusieurs commandes, les séparer par une virgule. Voir [Combinaions](#combinaisons)
+    - les commandes peuvent nécessiter des variables. Voir [Variables](#variables)
+  12. Enregistrer puis cliquer sur **Finish**  
+  13. Dites : « OK Google » (ou le trigger de votre assistant) suivi de votre phrase spéciale du point 4)  
+  14. Votre assistant devrait s'exécuter
+
+
 
 Appel via ifTTT
  		utiliser le pushbullet, push note en out avec :
@@ -85,7 +88,9 @@ COMMANDE(S) peut soit être une commande simple, soit une temporisation (temps e
  		yamaha_actionA#1#88					: cela lance la fonction A avec les variables 1 et 88
  		yamaha_actionA#33,*2,actionB#1#59   : cela lance la fonction A avec 33 en variable, pause de 2 sec, lance l'action B avec 1 et 59 en variables
 		
-## Commandes multiples
+### Combinaisons
+
+### Variables
 
 
 	=======================
