@@ -96,53 +96,44 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
 
 
 ### Commandes disponibles
-le paramétre `zone` est optionnel et le plugin selectionne automatiquement la `MainZone` si aucune variables ne lui est transmise
+##### Les variables :
+le paramétre `int zone` est optionnel et le plugin selectionne automatiquement la zone 1 `MainZone` si aucune variables ne lui est transmise. 
 
-powerOn`int zone`			=> Allume  
-powerOff`int zone`			=> Eteint  
+**powerOn** `int zone` : Allume  
+**powerOff** `int zone` : Eteint 
 
+**setMainInputTo** `int to` : definie le input pour la zone principale ( voir [Tableau des entrées](#entree))
+**setInputTo** `int to, int zone` : idem, mais sur une zone spécifique
 
+**setMainSceneTo** `int to` : charge la scene préconfigurée dans la zone 1 `MainZone` 
+**setSceneTo** `int to, int zone` : charge la scene préconfigurée dans la zone choisie
 
+**muteOn** `int zone` : active le mode sourdine
+**muteOff** `int zone` : active le mode sourdine
+**muteToggle** `int zone` : switch le mode sourdine en fonction de l'état actuel
 
-	=======================
-	COMMANDES disponibles :
-	=======================
+**setVolumeTo** = function(db, zone)	=> defini le volume
+**setVolume** = function(db, zone)		=> defini le volume (idem)
+**volumeUp** = function(by, zone)		=> augmente le volume par tranche de XdB (5=0.5dB)
+**volumeDown** = function(by, zone)		=> baisse le volume par tranche de XdB (5=0.5dB)
+**adjustVolumeBy** = function(by, zone)	=> ajuste le volume de +/- XdB (-15 = -1.5dB)
 
-	powerOn = function(zone) 		=> Allume 
-	powerOff = function(zone)		=> Eteint
+**setPureDirect** = function(on) 		=> switch du pure direct on = 1 pour activer ou 0 pour desactiver
 
-	setMainInputTo = function(to)		=> definie le input pour la zone principale ( voir tableau ci-dessous )
-	setInputTo = function(to, zone)		=> definie le choix du input sur une zone specifique ( voir tableaux ci-dessous )
+**stop = function(zone)			=> touche stop de la telecommande
+**pause = function(zone)			=> touche pause de la telecommande
+**play = function(zone)			=> touche play de la telecommande
+**skip = function(zone)			=> touche forward de la telecommande
+**rewind = function(zone)			=> touche rewind de la telecommande
 
-	setMainSceneTo = function(to) 		=> applique la scene préconfigurée dans la zone 1  (Main) to = 1,2,3 ou 4
-	setSceneTo = function(to, zone) 	=> applique la scene préconfigurée dans la zone choisie to = 1,2,3 ou 4
+**partyModeOn = function()		=> active le mode party ( duplication de l'input actuel sur toutes les zones dispo )
+**partyModeOff = function()		=> desactivation du mode party
+**partyModeUp = function() 		=> augmente le volume d'1 step de maniére equivalante dans toutes les zone 
+**partyModeDown = function()		=> baisse le volume d'1 step de maniére equivalante dans toutes les zone 
 
-	muteOn = function(zone) 		=> active le mode sourdine
-	muteOff = function(zone) 		=> active le mode sourdine
-	muteToggle = function(zone)		=> switch le mode sourdine 
+**sleep = function(val, zone) 		=> programe la mise en veille, val =  0,30,60,90,120 min (0 desactive)
 
-	setVolumeTo = function(to, zone)	=> defini le volume
-	setVolume = function(to, zone)		=> defini le volume (idem)
-	volumeUp = function(by, zone)		=> augmente le volume par tranche de XdB (5=0.5dB)
-	volumeDown = function(by, zone)		=> baisse le volume par tranche de XdB (5=0.5dB)
-	adjustVolumeBy = function(by, zone)	=> ajuste le volume de +/- XdB (-15 = -1.5dB)
-
-	setPureDirect = function(on) 		=> switch du pure direct on = 1 pour activer ou 0 pour desactiver
-
-	stop = function(zone)			=> touche stop de la telecommande
-	pause = function(zone)			=> touche pause de la telecommande
-	play = function(zone)			=> touche play de la telecommande
-	skip = function(zone)			=> touche forward de la telecommande
-	rewind = function(zone)			=> touche rewind de la telecommande
-
-	partyModeOn = function()		=> active le mode party ( duplication de l'input actuel sur toutes les zones dispo )
-	partyModeOff = function()		=> desactivation du mode party
-	partyModeUp = function() 		=> augmente le volume d'1 step de maniére equivalante dans toutes les zone 
-	partyModeDown = function()		=> baisse le volume d'1 step de maniére equivalante dans toutes les zone 
-
-	sleep = function(val, zone) 		=> programe la mise en veille, val =  0,30,60,90,120 min (0 desactive)
-
-	selectTunerFrequency = function(band, frequency) => permet de changer de station si mode tuner actif
+**selectTunerFrequency = function(band, frequency) => permet de changer de station si mode tuner actif
 			band : integer : 1 = FM ou 2 = AM
  			frequency : integer : ( différe selon band)
 							FM : de 8750 à 10800 par tranche de 5 ( sans le "." : 8750 = 87.50 Mhz)
