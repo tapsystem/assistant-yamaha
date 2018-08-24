@@ -1,10 +1,50 @@
 # assistant-yamaha
 
-Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de piloter un ampli AV Yamaha ( Testé sur Rx-V675). [stations Netatmo](https://weathermap.netatmo.com/).
-
+Ce plugin de [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/) permet de piloter un ampli AV Yamaha ( Testé sur Rx-V675).
 
 Controle Yamaha basé sur [PSeitz yamaha node module](https://github.com/PSeitz/yamaha-nodejs/).
 
+## Sommaire
+
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Utilisation](#utilisation)
+  - [Personnalisation](#personnalisation)
+  - [Commandes](#commandes)
+  - [Exemple](#exemple)
+
+## Installation
+
+Si vous n'avez pas installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), alors il faut le faire, et sélectionner **yamaha** comme plugin.
+
+Si vous avez déjà installé [`assistant-plugins`](https://aymkdn.github.io/assistant-plugins/), et que vous souhaitez ajouter ce plugin, alors :
+  - Pour Windows, télécharger [`install_yamaha.bat`]() dans le répertoire `assistant-plugins`, puis l'exécuter en double-cliquant dessus.  
+  - Pour Linux/MacOS, ouvrir une console dans le répertoire `assistant-plugins` et taper :  
+  `npm install assistant-temperature-local@latest --save --loglevel error && npm run-script postinstall`
+
+## Configuration
+
+Éditer le fichier `configuration.json` du répertoire `assistant-plugins`.
+
+Dans la section concernant le plugin `yamaha`, on trouve plusieurs paramètres.
+
+### Paramètre `auto_discover`
+
+### Paramètre `receiver_ip`
+
+### Paramètre `display_error`
+
+### Paramètre `default_cmd_interval`
+
+### Paramètre `receiver_minVoldB`
+
+### Paramètre `receiver_maxVoldB`
+
+
+
+
+
+## Utilisation
 Appel via ifTTT
  		utiliser le pushbullet, push note en out avec :
  		- Title : Assistant
