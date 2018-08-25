@@ -101,10 +101,9 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
   - les paramétres de volumes `int db` et `int by`permette de donner une indication de volume. Cette donnée doit être passée avec une sa valeur decimale et multipliée par 10. Ainsi pour réglé un volume à -45.0 dB, `int db` devra être égale à -450.
  
 ##### Power :
-**powerOn** `int zone` : Allume  
-**powerOff** `int zone` : Eteint 
-
-**sleep** `int val, int zone` : programme la mise en veille temporisée. `int val` =  0 (désactive la mise en veille), 30,60,90,120 (min) 
+ **powerOn** `int zone` : Allume  
+ **powerOff** `int zone` : Eteint 
+ **sleep** `int val, int zone` : programme la mise en veille temporisée. `int val` =  0 (désactive la mise en veille), 30,60,90,120 (min) 
 
 ##### Input et scenes prédéfinies :
 **setMainInputTo** `int to` : definie le input pour la zone principale ( voir [Tableau des entrées](#entree))
