@@ -103,6 +103,7 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
 ##### Power :
 **powerOn** `int zone` : Allume  
 **powerOff** `int zone` : Eteint 
+
 **sleep** `int val, int zone` : programme la mise en veille temporisée. `int val` =  0 (désactive la mise en veille), 30,60,90,120 (min) 
 
 ##### Input et scenes prédéfinies :
