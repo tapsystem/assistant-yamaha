@@ -100,49 +100,53 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
   - le paramétre `int zone` est optionnel et le plugin selectionne automatiquement la zone 1 `MainZone` si aucune variables ne lui est transmise. Les valeur possibles sont 1,2,3 ou 4 selon les versions d'ampli AV.
   - les paramétres de volumes `int db` et `int by`permette de donner une indication de volume. Cette donnée doit être passée avec une sa valeur decimale et multipliée par 10. Ainsi pour réglé un volume à -45.0 dB, `int db` devra être égale à -450.
  
-
+##### Power :
 **powerOn** `int zone` : Allume  
 **powerOff** `int zone` : Eteint 
+**sleep** `int val, int zone` : programme la mise en veille temporisée. `int val` =  0 (désactive la mise en veille), 30,60,90,120 (min) 
 
+##### Input et scenes prédéfinies :
 **setMainInputTo** `int to` : definie le input pour la zone principale ( voir [Tableau des entrées](#entree))
 **setInputTo** `int to, int zone` : idem, mais sur une zone spécifique
 
 **setMainSceneTo** `int to` : charge la scene préconfigurée dans la zone 1 `MainZone`. 
 **setSceneTo** `int to, int zone` : charge la scene préconfigurée dans la zone choisie
 
-**muteOn** `int zone` : active le mode sourdine
-**muteOff** `int zone` : active le mode sourdine
-**muteToggle** `int zone` : switch le mode sourdine en fonction de l'état actuel
+##### Volume :
+**muteOn** `int zone` : active le mode sourdine 
+**muteOff** `int zone` : active le mode sourdine 
+**muteToggle** `int zone` : switch le mode sourdine en fonction de l'état actuel 
 
-**setVolumeTo** `int db, int zone` : defini le volume à une valeur spécifique
-**setVolume** `int db, int zone` : (idem)
-**volumeUp** `int by, int zone` : augmente le volume par tranche du nombre de décibel indiqué (5 => +0.5dB)
-**volumeDown** `int by, int zone` : baisse le volume par tranche du nombre de décibel indiqué (50 => -5dB)
-**adjustVolumeBy** `int by, int zone` : ajuste le volume du nombre de décibel indiqué en tenant compte du signe +/- (-15 => -1.5dB et 25 => 2.5dB)
+**setVolumeTo** `int db, int zone` : defini le volume à une valeur spécifique 
+**setVolume** `int db, int zone` : (idem) 
+**volumeUp** `int by, int zone` : augmente le volume par tranche du nombre de décibel indiqué (5 => +0.5dB) 
+**volumeDown** `int by, int zone` : baisse le volume par tranche du nombre de décibel indiqué (50 => -5dB) 
+**adjustVolumeBy** `int by, int zone` : ajuste le volume du nombre de décibel indiqué en tenant compte du signe +/- (-15 => -1.5dB et 25 => 2.5dB) 
 
+##### Ambiance :
 **setPureDirect** `int on` : switch du pure direct (on = 1 pour activer ou 0 pour desactiver)
 
+##### Seek :
 **stop** `int zone` : equivalence de la touche stop de la telecommande
 **pause** `int zone` : equivalence de la touche pause de la telecommande
 **play** `int zone` : equivalence de la touche play de la telecommande
 **skip** `int zone` : equivalence de la touche forward de la telecommande
 **rewind** `int zone` : equivalence de la touche rewind de la telecommande
 
-**partyModeOn = function()		=> active le mode party ( duplication de l'input actuel sur toutes les zones dispo )
-**partyModeOff = function()		=> desactivation du mode party
-**partyModeUp = function() 		=> augmente le volume d'1 step de maniére equivalante dans toutes les zone 
-**partyModeDown = function()		=> baisse le volume d'1 step de maniére equivalante dans toutes les zone 
+##### Party :
+**partyModeOn** : active le mode party ( duplication de l'input actuel sur toutes les zones dispo de l'ampli )
+**partyModeOff** : desactivation du mode party
+**partyModeUp** : augmente le volume d'1 step de maniére equivalante dans toutes les zone 
+**partyModeDown** : baisse le volume d'1 step de maniére equivalante dans toutes les zone 
 
-**sleep = function(val, zone) 		=> programe la mise en veille, val =  0,30,60,90,120 min (0 desactive)
-
-**selectTunerFrequency = function(band, frequency) => permet de changer de station si mode tuner actif
-			band : integer : 1 = FM ou 2 = AM
- 			frequency : integer : ( différe selon band)
-							FM : de 8750 à 10800 par tranche de 5 ( sans le "." : 8750 = 87.50 Mhz)
-							AM : de 531 à 1611 par tranche de 9
-
-	selectFMmode = function(mode)		=> selectionne le mode stereo ou mono pour la FM : 1 = stereo , 2 = mono
-	selectTunerPreset = function(number)	=> preselection d'une radio enregistrée sur le tuner
+##### Radio :
+**selectTunerFrequency** `int band, int frequency` : permet de changer de station si l'input est sur le tuner
+  - `int band` : 1 pour FM et 2 pour AM
+  - `int frequency` : un peu plus compliqué, cela depends de la bande de diffusion selectionnée :
+    - en FM : de 8750 à 10800 par tranche de 5, et sans le point ou la virgule :  8955 => 89.55 Mhz
+    - en AM : de 531 à 1611 par tranche de 9 
+**selectFMmode** `int mode` : selectionne le mode stereo ou mono pour la FM : 1 pour stereo , 2 pour mono
+**selectTunerPreset** = function(number)	=> preselection d'une radio enregistrée sur le tuner
 
  Il est possible d'exposer d'autres functions de paramétrage, de listage, ... voir yamaha_simpleCommands.js pour plus de détails
  (setHDMIOutput, setBassTo, setTrebleTo, setSubwooferTrimTo, setDialogLiftTo, setDialogLevelTo, YPAOVolumeOn, YPAOVolumeOff, extraBassOn, extraBassOff, adaptiveDRCOn, adaptiveDRCOff, selectUSBListItem , selectWebRadioListItem .... )
