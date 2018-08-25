@@ -107,7 +107,7 @@ Il est possible de passer des valeurs au commande. Pour cela, séparez la comman
 **setMainInputTo** `int to` : definie le input pour la zone principale ( voir [Tableau des entrées](#entree)) 
 **setInputTo** `int to, int zone` : idem, mais sur une zone spécifique
 
-**setMainSceneTo** `int to` : charge la scene préconfigurée dans la zone 1 `MainZone` 
+**setMainSceneTo** `int to` : charge la scene préconfigurée dans la zone 1 `MainZone`
 **setSceneTo** `int to, int zone` : charge la scene préconfigurée dans la zone choisie
 
 **muteOn** `int zone` : active le mode sourdine
