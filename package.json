@@ -1,6 +1,6 @@
 {
   "name": "assistant-yamaha",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Plugin de contrôle d'un ampli / receiver Yamaha pour un Assistant via le package assistant-plugins",
   "author": "TapSystem",
   "main": "yamaha.js",
